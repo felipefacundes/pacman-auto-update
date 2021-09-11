@@ -1,0 +1,12 @@
+[Unit]
+Description=Pacman Auto Update
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/pacman-auto-update
+Nice=19
+KillMode=process
+SendSIGKILL=no
+
+[Install]
+WantedBy=multi-user.target
